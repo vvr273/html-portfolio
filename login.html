@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .login{
+        border: 1px solid black;
+        width: 400px;
+        height: 500px;
+        background: url(vit.JPG);
+        color: whitesmoke;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        }
+    form{
+        display: block;
+        box-sizing: border-box;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: brightness(50%);
+        flex-direction: column;
+        display: flex;
+        gap: 5px;
+        
+        
+        }
+    h1{
+        font-weight: normal;
+        font-size: 24px;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        margin-bottom: 60px;
+    }
+     label{
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding-left: 10px;
+     }
+     input{
+        background: rgba(255, 255, 255, 0.3);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0px 20px;
+        border: none;
+        margin-bottom: 20px;
+        color: white;
+
+     }
+
+     button{
+        background: rgb(45,126,231);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+        border: none;
+        margin: 10px 0px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        color: whitesmoke;
+        font-size: 12px;
+        text-transform: uppercase;
+     }
+     
+     #button:hover{
+            background-color: rgb(224, 10, 10) ;
+     }
+    </style>
+    <script>let logins = [];
+
+        function login() {
+            let id = prompt("Enter your email", "anonymous");
+            let password = prompt("Enter password");
+        
+            // Store the credentials in an object
+            let credits = { id: id, password: password };
+        
+            // Add the credentials to the logins array
+            logins.push(credits);
+        
+            // Get the last added credentials
+            let lastCredit = logins[logins.length - 1];
+        
+            // Prompt for password confirmation
+            let confirmedPassword = prompt("Enter password to confirm");
+        
+            // Check if the confirmed password matches the stored password
+            if (confirmedPassword === lastCredit.password) {
+                alert("Correct password");
+            } else {
+                alert("Entered password doesn't match");
+                login();
+            }
+        }</script>
+</head>
+<body>
+    <div class="login">
+        <form action="Agrishare.html">
+          <h1>
+              LOG IN 
+          </h1>
+          <label for="12px" >
+              Username
+          </label>
+          <input type="text"  placeholder="pleas enter your name">
+          
+          <label for="50%">password</label>
+          <input type="password">
+          
+          <button id="button" onclick="login()"> 
+            
+            Submit</button>
+        </form>
+      </div>
+      <div>
+     
+
+</html>

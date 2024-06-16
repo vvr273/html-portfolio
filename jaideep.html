@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: goldenrod;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+</head>
+<body>
+    <h1>heading 1</h1>
+    <h2>heading 2</h2>
+    <h3>heading 3</h3>
+    <p>Lorem ipsum dolor sit amet, <br><hr>consectetur adipisicing elit. Quaerat culpa, delectus architecto dolorem fugit nisi! Ratione error, voluptatem reprehenderit adipisci tempore facere commodi fuga, accusamus illo architecto eius harum dicta!</p>
+    <ul>
+        <li>kaaka</li>
+        <li>dosa</li>
+        <li>tomato</li>
+        <li>mirapa</li>
+        <li>a</li>
+        <li>b</li>
+    </ul>
+    <ol>
+        <li>topper 1</li>
+        <li>topper 2</li>
+        <li>topper 3</li>
+    </ol>
+    <a href="Agrishare.html">jaideep gadu</a>
+
+    <div class="play-button">
+        <button>Play Audio</button>
+    </div>
+
+    <script>
+        console.log("hello");
+        console.log("idi jaideep adda");
+
+        var audio = new Audio('The_Dilli_Connect_Ringtone.mp3'); // Replace 'path_to_your_audio_file.mp3' with the correct path to your audio file
+
+        var playButton = document.querySelector('.play-button');
+        playButton.addEventListener('click', function() {
+            audio.play();
+        });
+    </script>
+</body>
+</html>
